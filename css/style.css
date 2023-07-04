@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background: black;
     color: white;
@@ -16,4 +22,15 @@ ul#game-list li a {
     width: 20vw;
     height: 20vw;
     background-color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    transition: 250ms ease;
 }  
+
+ul#game-list li a:focus {
+    transform: scale(1.1);
+}
