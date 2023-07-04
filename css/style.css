@@ -1,0 +1,19 @@
+body {
+    background: black;
+    color: white;
+}
+
+ul#game-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+ul#game-list li a {
+    display: block;
+    margin: 10px;
+    width: 20vw;
+    height: 20vw;
+    background-color: #333;
+}  

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Game List</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <h1>Game List</h1>
+    <ul id="game-list">
+    </ul>
+
+    <script>
+        //  object with game data
+        const games = [
+            {
+                id: 1,
+                year: 2022,
+                title: "Hide Camp",
+                author: "Weba Jackson"
+            },
+            {
+                id: 2,
+                year: 2022,
+                title: "Scratched",
+                author: "John Shevchenko"
+            },
+            {
+                id: 3,
+                year: 2022,
+                title: "Polybius",
+                author: "Lyle Rains"
+            },
+            {
+                id: 4,
+                year: 2021,
+                title: "Super Mario Bros",
+                author: "Shigeru Miyamoto"
+            },
+            {
+                id: 5,
+                year: 2021,
+                title: "Doom",
+                author: "John Carmack"
+            }
+        ];
+
+        // Get the <ul> element
+        const gameList = document.getElementById("game-list");
+
+        // Loop through the games array and create list items
+        games.forEach(function (game) {
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            const h2 = document.createElement("h2");
+            const p = document.createElement("p");
+            a.href = `game.php?id=${game.id}`;
+            h2.textContent = game.title;
+            p.textContent = game.author;
+            a.appendChild(h2);
+            a.appendChild(p);
+            li.appendChild(a);
+            gameList.appendChild(li);
+        });
+    </script>
+</body>
+
+</html>
